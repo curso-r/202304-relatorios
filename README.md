@@ -4,7 +4,7 @@
 ## Informações importantes
 
 - [Clique
-  aqui](https://github.com/curso-r/202304-relatorios/materiais/material_do_curso.zip)
+  aqui](https://curso-r.github.io/202304-relatorios/materiais/material_do_curso.zip)
   para baixar o material do curso.
 
 - Nosso blog: <https://curso-r.com/blog/>
