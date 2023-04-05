@@ -41,8 +41,9 @@ Fora do horário de aula ou monitoria:
 
 ## Práticas
 
-| Exemplo |
-|:--------|
+| Exemplo                                                               |
+|:----------------------------------------------------------------------|
+| [aula_1](https://curso-r.github.io/202304-relatorios/praticas/aula_1) |
 
 ## Lição de casa
 
@@ -65,6 +66,12 @@ relacionadas com o conteúdo da aula).
 | Trabalho final | [Post com ideias de Bases de dados](https://blog.curso-r.com/posts/2022-06-11-bases-de-dados/)                   |
 | Pré-curso      | [Tutorial de instalação do R, RStudio, Git](https://www.youtube.com/watch?t=2415&v=fiZStofJqMQ&feature=youtu.be) |
 | Quarto         | [Quarto - Link de instalação](https://quarto.org/docs/get-started/)                                              |
+| RMarkdown      | [Guia de referência do RMarkdown](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)        |
+| RMarkdown      | [Capítulo do livro “Ciência de Dados em R”: Relatórios](https://livro.curso-r.com/9-relatorios.html)             |
+| RMarkdown      | [Folha de cola (cheatsheet): RMarkdown](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)     |
+| RMarkdown      | [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)             |
+| Quarto         | [Galeria do Quarto](https://quarto.org/docs/gallery/)                                                            |
+| PDF            | [Pagedown - converter html em PDF](https://github.com/rstudio/pagedown)                                          |
 
 ## Redes sociais da Curso-R
 
