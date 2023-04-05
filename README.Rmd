@@ -74,12 +74,14 @@ Fora do horário de aula ou monitoria:
   dplyr::select(Exemplo = url) |>
   knitr::kable()
 ```
+
 ## Práticas
 
 ```{r}
 "praticas/" |>
   fs::dir_ls(fail = FALSE) |>
   path_to_url() |>
+  dplyr::filter(stringr::str_detect(url, ".zip")) |> 
   dplyr::select(Exemplo = url) |>
   knitr::kable()
 ```

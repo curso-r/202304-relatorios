@@ -41,9 +41,9 @@ Fora do horário de aula ou monitoria:
 
 ## Práticas
 
-| Exemplo                                                               |
-|:----------------------------------------------------------------------|
-| [aula_1](https://curso-r.github.io/202304-relatorios/praticas/aula_1) |
+| Exemplo                                                                       |
+|:------------------------------------------------------------------------------|
+| [aula_1.zip](https://curso-r.github.io/202304-relatorios/praticas/aula_1.zip) |
 
 ## Lição de casa
 
