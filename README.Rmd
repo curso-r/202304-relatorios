@@ -105,7 +105,6 @@ conteúdo da aula).
 ```{r echo=FALSE, message=FALSE}
 safe_buscar_materiais_extras <- purrr::possibly(
   .f = function(){
-    
     googlesheets4::gs4_deauth()
     "1Oif55qAuR_yYLt0D2Ri744SAlaFf9SleJfQIIUgB_hA" |>
       googlesheets4::read_sheet("relatorios") |>
@@ -119,6 +118,10 @@ safe_buscar_materiais_extras <- purrr::possibly(
 tabela <- safe_buscar_materiais_extras()
 tabela
 ```
+
+## Assuntos pedidos pelos alunos
+
+- [ ] Vários outputs do mesmo arquivo
 
 ## Redes sociais da Curso-R
 
