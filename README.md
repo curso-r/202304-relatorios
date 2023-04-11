@@ -78,6 +78,10 @@ relacionadas com o conteúdo da aula).
 | Quarto         | [Galeria do Quarto](https://quarto.org/docs/gallery/)                                                            |
 | PDF            | [Pagedown - converter html em PDF](https://github.com/rstudio/pagedown)                                          |
 
+## Assuntos pedidos pelos alunos
+
+- [ ] Vários outputs do mesmo arquivo
+
 ## Redes sociais da Curso-R
 
 - Youtube: <https://www.youtube.com/c/CursoR6/featured>
