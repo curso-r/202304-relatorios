@@ -4,7 +4,7 @@ params:
   turma: 202304-relatorios
   nome_curso: Relatórios e apresentações
   download_material: 'TRUE'
-  aula: 10
+  aula: 1
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -30,7 +30,7 @@ path_to_url <- function(path) {
 ```{r results = 'asis'}
 # Baixar o ZIP do repo da turma (o repo principal não vai ter os scripts feitos em aula)
 if (params$download_material == "TRUE") {
-  glue::glue("- [Clique aqui](https://github.com/curso-r/{params$turma}/materiais/material_do_curso.zip) para baixar o material do curso.")
+  glue::glue("- [Clique aqui](https://curso-r.github.io/202304-relatorios/materiais/material_do_curso.zip) para baixar o material do curso.")
 }
 ```
 
@@ -74,12 +74,14 @@ Fora do horário de aula ou monitoria:
   dplyr::select(Exemplo = url) |>
   knitr::kable()
 ```
+
 ## Práticas
 
 ```{r}
 "praticas/" |>
   fs::dir_ls(fail = FALSE) |>
   path_to_url() |>
+  dplyr::filter(stringr::str_detect(url, ".zip")) |> 
   dplyr::select(Exemplo = url) |>
   knitr::kable()
 ```

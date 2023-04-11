@@ -1,0 +1,57 @@
+---
+title: "meu 1 markdown"
+author: Turma 1
+format: revealjs
+---
+
+```{r}
+# install.packages("jsonlite")
+```
+
+
+```{r}
+# pagedown::chrome_print("praticas/meu-primeiro-quarto.html")
+```
+
+
+
+## Quarto
+
+**Quarto enables** you to *weave together* content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+1.  Bia
+
+2.  Julio
+
+3.  ,....
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+# isso é um comentário
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+```{r}
+library(knitr)
+```
+
+-   Ctrl + Alt + I
+
+---
+
+```{r}
+# codigo em R aqui dentro pra ser executado
+mtcars
+```
