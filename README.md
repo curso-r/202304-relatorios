@@ -29,10 +29,15 @@ Fora do horário de aula ou monitoria:
 
 ## Slides
 
-| Slide                                                                                                       |
-|:------------------------------------------------------------------------------------------------------------|
-| [01-sobre-o-curso.html](https://curso-r.github.io/202304-relatorios/materiais/slides/01-sobre-o-curso.html) |
-| [02-sobre-rmd-qmd.html](https://curso-r.github.io/202304-relatorios/materiais/slides/02-sobre-rmd-qmd.html) |
+| Slide                                                                                                             |
+|:------------------------------------------------------------------------------------------------------------------|
+| [01-sobre-o-curso.html](https://curso-r.github.io/202304-relatorios/materiais/slides/01-sobre-o-curso.html)       |
+| [02-sobre-rmd-qmd.html](https://curso-r.github.io/202304-relatorios/materiais/slides/02-sobre-rmd-qmd.html)       |
+| [03-intermediario.html](https://curso-r.github.io/202304-relatorios/materiais/slides/03-intermediario.html)       |
+| [04-customizacao.html](https://curso-r.github.io/202304-relatorios/materiais/slides/04-customizacao.html)         |
+| [05-compartilhamento.html](https://curso-r.github.io/202304-relatorios/materiais/slides/05-compartilhamento.html) |
+| [06-automatizacao.html](https://curso-r.github.io/202304-relatorios/materiais/slides/06-automatizacao.html)       |
+| [07-extensoes.html](https://curso-r.github.io/202304-relatorios/materiais/slides/07-extensoes.html)               |
 
 ## Scripts utilizados em aula
 
