@@ -124,6 +124,7 @@ tabela
 ## Assuntos pedidos pelos alunos
 
 - [ ] Vários outputs do mesmo arquivo
+- [ ] Link para arquivo em outra pasta
 
 ## Redes sociais da Curso-R
 

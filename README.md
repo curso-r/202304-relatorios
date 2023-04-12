@@ -49,6 +49,7 @@ Fora do horário de aula ou monitoria:
 | Exemplo                                                                       |
 |:------------------------------------------------------------------------------|
 | [aula_1.zip](https://curso-r.github.io/202304-relatorios/praticas/aula_1.zip) |
+| [aula_2.zip](https://curso-r.github.io/202304-relatorios/praticas/aula_2.zip) |
 
 ## Lição de casa
 
@@ -81,6 +82,7 @@ relacionadas com o conteúdo da aula).
 ## Assuntos pedidos pelos alunos
 
 - [ ] Vários outputs do mesmo arquivo
+- [ ] Link para arquivo em outra pasta
 
 ## Redes sociais da Curso-R
 
