@@ -1,0 +1,49 @@
+---
+title: "Filmes da Pixar"
+format: 
+  docx:
+    reference-doc: template.docx
+knitr: 
+  opts_chunk: 
+    echo: false
+    message: false
+    warning: false
+lang: pt
+---
+
+```{r}
+library(tidyverse)
+da <- dados::pixar_bilheteria
+```
+
+## Tabela
+
+A @tbl-bilheteria mostra os filmes com maior bilheteria da Pixar.
+
+```{r}
+#| label: tbl-bilheteria
+#| tbl-cap: Dez filmes com maiores bilheterias
+da |> 
+  arrange(desc(bilheteria_mundial)) |> 
+  mutate(bilheteria = bilheteria_mundial / 1e6) |> 
+  slice_head(n = 10) |> 
+  select(filme, bilheteria) |> 
+  knitr::kable()
+```
+
+## Gráfico
+
+A @fig-bilheteria mostra as bilheterias e orçamentos dos filmes da Pixar
+
+```{r}
+#| label: fig-bilheteria
+#| fig-cap: Gráfico de dispersão da bilheteria explicada pelo orçamento
+
+
+da |> 
+  ggplot(aes(x = orcamento, y = bilheteria_mundial)) +
+  geom_point()
+
+
+```
+
