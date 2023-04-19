@@ -50,6 +50,7 @@ Fora do horário de aula ou monitoria:
 |:------------------------------------------------------------------------------|
 | [aula_1.zip](https://curso-r.github.io/202304-relatorios/praticas/aula_1.zip) |
 | [aula_2.zip](https://curso-r.github.io/202304-relatorios/praticas/aula_2.zip) |
+| [aula_3.zip](https://curso-r.github.io/202304-relatorios/praticas/aula_3.zip) |
 
 ## Lição de casa
 
