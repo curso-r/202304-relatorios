@@ -1,0 +1,56 @@
+---
+title: "Apresentação com Quarto"
+subtitle: "Experimentando customizar o HTML :)"
+format: 
+  revealjs:
+    theme:  moon
+#    theme: "custom-2.scss"
+#    css: custom.css
+editor: visual
+# title-slide-attributes: 
+#   data-background-color: "aquamarine"
+# embed-resources: true
+---
+
+## Importando dados
+
+```{r}
+library(tidyverse)
+```
+
+-   item 1
+-   item 2
+
+```{r}
+arquivo_excel <- here::here("dados/Relatorio_20235918.xlsx")
+
+# arquivo_excel <- "~/Downloads/Relatorio_20235918.xlsx"
+
+arquivo_bruto <- readxl::read_excel(arquivo_excel, skip = 3)
+
+barragens <- arquivo_bruto |> janitor::clean_names()
+
+dplyr::glimpse(barragens)
+```
+
+## Colocando uma tabela
+
+```{r}
+barragens |> 
+  count(uf, sort = TRUE) |> 
+  slice_head(n = 5) |> 
+  knitr::kable()
+```
+
+## Colocando um gráfico
+
+```{r}
+barragens %>%
+ filter(!(dano_potencial_associado %in% "N/A")) %>%
+ ggplot() +
+  aes(x = dano_potencial_associado, fill = categoria_de_risco) +
+  geom_bar(position = "dodge") +
+  scale_fill_brewer(palette = "Dark2", direction = 1) +
+  theme_minimal() +
+  theme(legend.position = "top")
+```

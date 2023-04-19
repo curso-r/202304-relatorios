@@ -9,6 +9,7 @@ format:
 editor: visual
 # title-slide-attributes: 
 #   data-background-color: "aquamarine"
+# embed-resources: true
 ---
 
 ## Importando dados
@@ -32,7 +33,7 @@ barragens <- arquivo_bruto |> janitor::clean_names()
 dplyr::glimpse(barragens)
 ```
 
-## Colocando uma tabela
+## Colocando uma tabela!!!
 
 ```{r}
 barragens |> 

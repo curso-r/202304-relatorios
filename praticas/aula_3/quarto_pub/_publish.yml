@@ -1,0 +1,4 @@
+- source: index.qmd
+  quarto-pub:
+    - id: d436a347-93e8-4eb5-866c-38b30dced44c
+      url: 'https://quartopub.com/sites/jtrecenti/relatorios-curso-r-2023'
