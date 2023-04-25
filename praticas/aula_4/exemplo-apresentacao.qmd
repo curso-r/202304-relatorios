@@ -1,0 +1,60 @@
+---
+title: "Barragens de mineração em `r params$estado`"
+subtitle: "Dados do SIG-BM"
+format: 
+  revealjs:
+    theme:  solarized
+editor: visual
+params:
+  estado: "PR"
+embed-resources: true
+---
+
+## Cenário
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+arquivo_excel <- here::here("dados/Relatorio_20235918.xlsx")
+
+# arquivo_excel <- "~/Downloads/Relatorio_20235918.xlsx"
+
+arquivo_bruto <- readxl::read_excel(arquivo_excel, skip = 3)
+
+barragens <- arquivo_bruto |> janitor::clean_names()
+
+barragens_filtrado <- barragens |> 
+  filter(uf == params$estado)
+
+base_nome_estado <- abjData::muni |> 
+  distinct(uf_nm, uf_sigla, regiao_nm) |> 
+  filter(uf_sigla == params$estado)
+
+
+# dplyr::glimpse(barragens)
+```
+
+O estado de `r base_nome_estado$uf_nm`, localizado na região `r base_nome_estado$regiao_nm` do Brasil, conta com `r nrow(barragens_filtrado)` barragens cadastradas no SIGBM.
+
+## Principais empreendedores de barragens
+
+```{r}
+barragens_filtrado |> 
+  count(nome_do_empreendedor, sort = TRUE) |> 
+  slice_head(n = 5) |> 
+  knitr::kable()
+```
+
+## Dano potencial associado por barragem
+
+```{r grafico}
+barragens_filtrado %>%
+ ggplot() +
+  aes(x = dano_potencial_associado, fill = categoria_de_risco) +
+  geom_bar(position = "dodge") +
+  scale_fill_brewer(palette = "Dark2", direction = 1) +
+  theme_minimal() +
+  theme(legend.position = "top")
+```
