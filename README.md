@@ -119,11 +119,22 @@ relacionadas com o conteúdo da aula).
 | Dúvidas            | [Dúvida: Erro de versão de pacotes](https://discourse.curso-r.com/t/erro-outputs-em-quarto/2315)                                                              |
 | Customização       | [Alterar fundo dos slides no quarto](https://quarto.org/docs/presentations/revealjs/#main-title-slide-background)                                             |
 | Customização       | [Exemplo de arquivo .scss para usar com slides no Quarto](https://raw.githubusercontent.com/curso-r/quarto-cursor-theme/main/_extensions/curso-r/custom.scss) |
+| Quarto             | [Documentação sobre apresentações com Quarto](https://quarto.org/docs/presentations/revealjs/demo/#/title-slide)                                              |
+| Extensões          | [Live sobre Shiny e geração de RMarkdown](https://www.youtube.com/watch?v=tJmfcUC0bgY)                                                                        |
+| Extensões          | [Quarto - Modelos para artigo científico](https://quarto.org/docs/journals/)                                                                                  |
+| Extensões          | [Tema da R-Ladies para slides com Quarto](https://github.com/beatrizmilz/quarto-rladies-theme)                                                                |
+| Extensões          | [Dúvida: como colocar o resultado de um código no proximo slide?](https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/posts/05-output-location/)         |
+| Extensões          | [Apresentação com Quarto](https://beatrizmilz.github.io/rstudioconf2022/)                                                                                     |
+| Extensões          | [Livros com Quarto](https://quarto.org/docs/books/)                                                                                                           |
+| Extras             | [highcharts - gráficos que fazem voosh](https://www.highcharts.com/blog/tutorials/highcharts-for-r-users/)                                                    |
+| Extensões          | [Material sobre criar apresentações com quarto](https://beamilz.com/talks/pt/2022-latinr-quarto-tutorial/)                                                    |
+| Extensões          | [Customizar tema de apresentação com Quarto](https://quarto.org/docs/presentations/revealjs/themes.html)                                                      |
+| Quarto             | [Quarto Projects](https://quarto.org/docs/projects/quarto-projects.html)                                                                                      |
 
 ## Assuntos pedidos pelos alunos
 
-- [ ] Vários outputs do mesmo arquivo
-- [ ] Link para arquivo em outra pasta
+- [x] Vários outputs do mesmo arquivo
+- [x] Link para arquivo em outra pasta
 
 ## Redes sociais da Curso-R
 

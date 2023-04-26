@@ -4,7 +4,7 @@ params:
   turma: 202304-relatorios
   nome_curso: Relatórios e apresentações
   download_material: 'TRUE'
-  aula: 3
+  aula: 4
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -123,8 +123,8 @@ tabela
 
 ## Assuntos pedidos pelos alunos
 
-- [ ] Vários outputs do mesmo arquivo
-- [ ] Link para arquivo em outra pasta
+- [x] Vários outputs do mesmo arquivo
+- [x] Link para arquivo em outra pasta
 
 ## Redes sociais da Curso-R
 
