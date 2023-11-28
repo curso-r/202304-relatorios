@@ -1,0 +1,250 @@
+---
+title: "Aula 2"
+format: html
+editor: visual
+knitr: 
+  opts_chunk: 
+    message: false
+    warning: false
+    echo: true
+bibliography: 
+  - refs.bib
+  - mais-referencias.bib
+  - pacotes.bib
+lang: pt
+csl: abnt.csl
+---
+
+-   `#|` é chamada em inglês de hash-pipe.
+
+## Chunk options
+
+```{r}
+#| echo: true
+#| message: true
+library(tidyverse)
+```
+
+```{r}
+#| echo: false
+meus_pacotes <- c("tidyverse", "ggplot2", "here")
+knitr::write_bib(meus_pacotes, "pacotes.bib")
+
+```
+
+@tidyverse2019
+
+
+```{r}
+#| echo: false
+glimpse(starwars)
+```
+
+```{r}
+#| echo: fenced
+glimpse(starwars)
+```
+
+```{r}
+#| warning: false
+log(-1)
+```
+
+```{r}
+#| eval: false
+# exemplo de utilidade: quando quer baixar dados e salvar localmente.
+glimpse(diamonds)
+```
+
+## Imagens
+
+Com Markdown:
+
+[![Logo do R](https://www.r-project.org/Rlogo.png){fig-alt="Imagem do logo do R" fig-align="center" width="38%"}](https://www.r-project.org/)
+
+Com knitr:
+
+```{r}
+#| out-width: "30%"
+#| fig-align: "center"
+#| fig-cap: "Logo do R"
+#| fig-alt: "Imagem do logo do R"
+knitr::include_graphics("https://www.r-project.org/Rlogo.png")
+```
+
+![Imagem local](logo-r.png){fig-align="center"}
+
+![outra imagem](images/imagem-r.png){fig-align="center" width="100%"}
+
+![outra imagem](images/imagem-r.png){fig-align="center"}
+
+## Adicionar gráficos
+
+```{r}
+#| out-width: "70%"
+#| fig-align: center
+#| fig-cap: "Gráfico de exemplo"
+#| dpi: 300
+starwars |> 
+  ggplot() +
+  aes(x = mass, y = height) +
+  geom_point() +
+  theme_light()
+  
+```
+
+## Importar os dados
+
+```{r}
+#| echo: true
+imdb_v1 <- read_csv2("../../dados/imdb.csv")
+glimpse(imdb_v1)
+```
+
+```{r}
+# here::here("dados/imdb.csv")
+imdb_v2 <- read_csv2(here::here("dados/imdb.csv"))
+glimpse(imdb_v2)
+```
+
+## Tabelas
+
+```{r}
+tabela_planetas <- starwars |> 
+  count(homeworld, sort = TRUE) |> 
+  slice(1:10)
+```
+
+### knitr::kable
+
+```{r}
+tabela_planetas |> 
+  knitr::kable(col.names = c("Planeta", "Quantidade de personagens"))
+```
+
+### gt::gt
+
+```{r}
+tabela_planetas |> 
+  gt::gt()
+```
+
+### reactable::reactable
+
+```{r}
+tabela_planetas |> 
+  reactable::reactable(sortable = TRUE, searchable = TRUE)
+```
+
+### DT::datatable
+
+```{r}
+tabela_com_download <- function(df){
+  df |>
+  DT::datatable(options = list(
+    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+    dom = 'Blfrtip'
+  ),
+  extensions = "Buttons")
+}
+```
+
+```{r}
+tabela_com_download(mtcars)
+```
+
+```{r}
+tabela_planetas |>
+  DT::datatable(options = list(
+    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+    dom = 'Blfrtip'
+  ),
+  extensions = "Buttons")
+```
+
+### flextable
+
+```{r}
+tabela_planetas |> 
+  flextable::flextable()
+```
+
+-   Quando usamos :: , nao precisamos carregar o pacote antes!
+
+## Código inline
+
+O número pi é `r pi`!
+
+```{r}
+personagem_mais_pesado <- starwars |> 
+  filter(mass == max(mass, na.rm = TRUE))
+```
+
+A base starwars apresenta `r nrow(starwars)` personagens.
+
+O personagem com a maior massa é o/a `r  personagem_mais_pesado$name`, tendo `r personagem_mais_pesado$mass` kg.
+
+O primeiro personagem da base é o `r starwars[1,1]`.
+
+```{r}
+personagens_naboo <- starwars |> 
+  filter(homeworld == "Naboo") |> 
+  distinct(name)
+```
+
+Os personagens do planeta Naboo são `r knitr::combine_words(personagens_naboo$name, and = " e ", oxford_comma = FALSE)`.
+
+## Equações
+
+Equações inline: $x^2=16$
+
+Equações grandes
+
+$$
+\int_{-\infty}^\infty e^{-x^2} dx = \sqrt{\pi}
+$$
+
+$$
+y = \beta_0 + \beta_1x_1 + \dots + \beta_p x_p + \epsilon, \epsilon \sim \mathcal N(0, \sigma^2)
+$$
+
+Como é possível ver na equação acima, as mudanças climáticas são reais [@climaticas2014base].
+
+[@conti2005consideraccoes]
+
+sim!
+
+Vamos discutir sobre referências cruzadas em seções na @sec-minha-secao-ultima.
+
+esse paper é legal: @baldiUnderstandingDropout2013
+
+Link para outro documento interno [texto do link](../aula_1/meu-primeiro-quarto.html)
+
+Segundo a @fig-minha-figura
+
+```{r}
+#| label: fig-minha-figura
+#| fig-cap: Minha figura favorita.
+
+knitr::include_graphics("logo-r.png")
+```
+
+DT, reactable, ...
+
+Segundo a @tbl-minha-tabela
+
+```{r}
+#| label: tbl-minha-tabela
+#| tbl-cap: Minha tabela favorita.
+
+knitr::kable(head(cars))
+```
+
+
+# Minha seção nova {#sec-minha-secao-ultima}
+
+
+# Minhas referências
+
+::: {#refs}
+:::
